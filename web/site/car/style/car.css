@@ -1,0 +1,33 @@
+:where(h1) {
+	margin-block: 0em;
+	font-size: 2em;
+}
+
+body {
+	background-color: azure;
+
+	.hidden {
+		display: none;
+	}
+
+	section.car {
+		label {
+			display: inline-block;
+			width: 90px;
+			text-align: right;
+		}
+
+		label.option {
+			width: 190px;
+		}
+
+		div.photo>button>img {
+			width: 60px;
+			height: 60px;
+		}
+
+		div.condition>textarea {
+			resize: none;
+		}
+	}
+}

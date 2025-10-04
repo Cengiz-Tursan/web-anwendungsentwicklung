@@ -1,0 +1,1 @@
+"C:\Program Files\Java\jdk-21\bin\keytool" -genkey -v -alias DT-P-9QNW -keyalg RSA -validity 3652 -storetype pkcs12 -keystore DT-P-9QNW-rest.p12

@@ -1,0 +1,25 @@
+Properties of the cookbook_model entity classes
+===============================================
+
+class AbstractEntity:
+- key: "discriminator", value: String
+
+class Document extends AbstractEntity:
+- key: "size", value: Number
+
+class Person extends AbstractEntity:
+- key: "avatar-reference", value: Number
+
+class Victual extends AbstractEntity:
+- key: "avatar-reference", value: Number
+- key: "author-reference", value: Number 0..1
+
+class Recipe extends AbstractEntity:
+- key: "avatar-reference", value: Number
+- key: "author-reference", value: Number 0..1
+- key: "ingredient-count", value: Number
+- key: "illustration-count", value: Number
+- key: "diet", value: String
+
+class Ingredient extends AbstractEntity:
+- key: "recipe-reference", value: Number

@@ -1,0 +1,30 @@
+Exceptions
+==========
+
+Errors:
+- Fehler die aufgrund von System-Umständen auftreten
+  Beispiel: OutOfMemoryError
+- Typische Fehlerbehandlung: Programm beenden & System upgraden
+- Das Fehlerobjekt erbt von der Klasse Error
+
+Unchecked Exceptions:
+- Fehler die aufgrund spezifischer Operationen ausgelöst werden,
+  jedoch meist nicht behandelt werden können
+  Beispiele: NullPointerException, IllegalArgumentException, IllegalStateExcetion, UncheckedIOException
+- Typische Fehlerbehandlung: Programm beenden & Programmcode korrigieren
+- Das Fehlerobjekt erbt von der Klasse RuntimeException
+
+Checked Exceptions:
+- Fehler die aufgrund spezifischer Operationen ausgelöst werden,
+  jedoch meist behandelt werden können
+- Beispiele: IOException, SQLException
+- Das Fehlerobjekt erbt weder von Error noch von RuntimeException
+
+Throwable extends Object
+- Error extends Throwable
+- Exception extends Throwable
+  - RuntimeException extends Exception
+  - IOEsxception extends Exception
+  - SQLException extends Exception
+
+

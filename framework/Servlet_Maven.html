@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Servlet-Anleitung: HelloServlet deployen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Fira Sans", Arial, sans-serif; }
+    body { margin: 2rem; line-height: 1.45; }
+    h1,h2,h3 { line-height: 1.2; }
+    code,kbd,pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", Monaco, "Courier New", monospace; }
+    pre { background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: .5rem; overflow:auto; }
+    .box { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1rem; background: #fafafa; }
+    .step { margin: 1.25rem 0; }
+    .ok { display:inline-block; background:#e6ffed; border:1px solid #c7f9d4; color:#065f46; padding:.2rem .5rem; border-radius:.4rem; font-size:.875rem; }
+    .path { color:#2563eb; font-weight:600; }
+    hr { border:0; height:1px; background:#e5e7eb; margin:2rem 0; }
+    a { color:#2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { margin: .25rem 0 .75rem 1.25rem; }
+  </style>
+</head>
+<body>
+  <h1>🧩 Anleitung: Servlet mit Maven </h1>
+  <p class="box">Diese Seite wird von <b>HelloServlet</b> erzeugt. Folge den Schritten unten, um das Projekt
+  selbst anzulegen, zu bauen und zu deployen.</p>
+
+  <h2>1) Projektstruktur</h2>
+  <div class="step">
+    <pre><code>HelloServlet/
+ ├─ pom.xml
+ └─ src/
+     └─ main/
+         ├─ java/
+         │   └─ com/
+         │       └─ example/
+         │           └─ HelloServlet.java
+         └─ webapp/
+             └─ WEB-INF/
+                 └─ web.xml</code></pre>
+  </div>
+
+  <h2>2) Dateien anlegen</h2>
+  <h3>2.1 <span class="path">pom.xml</span></h3>
+  <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.example&lt;/groupId&gt;
+    &lt;artifactId&gt;HelloServlet&lt;/artifactId&gt;
+    &lt;version&gt;1.0&lt;/version&gt;
+    &lt;packaging&gt;war&lt;/packaging&gt;
+
+    &lt;properties&gt;
+        &lt;maven.compiler.release&gt;21&lt;/maven.compiler.release&gt;
+        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;jakarta.servlet&lt;/groupId&gt;
+            &lt;artifactId&gt;jakarta.servlet-api&lt;/artifactId&gt;
+            &lt;version&gt;6.0.0&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+     &lt;!-- So heisst der file am ende also der war file --&gt;
+        &lt;finalName&gt;HelloServlet&lt;/finalName&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+                &lt;version&gt;3.11.0&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;release&gt;${maven.compiler.release}&lt;/release&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
+                &lt;version&gt;3.4.0&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;failOnMissingWebXml&gt;false&lt;/failOnMissingWebXml&gt;
+                    &lt;warSourceDirectory&gt;src/main/webapp&lt;/warSourceDirectory&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+&lt;/project&gt;</code></pre>
+
+ <h3>Nach dem ändern der pom.xml, einmal rechtsklick auf die pom datei und Maven -> sync project </h3>
+
+  <h3>2.2 <span class="path">src/main/webapp/WEB-INF/web.xml</span></h3>
+  <pre><code>&lt;web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         version="6.0"&gt;
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;HelloServlet&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;com.example.HelloServlet&lt;/servlet-class&gt;
+    &lt;/servlet&gt;
+
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;HelloServlet&lt;/servlet-name&gt;
+        &lt;!-- Du kannst / oder /* verwenden, aber ich habe /hello genommen --&gt;
+        &lt;url-pattern&gt;/hello&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;</code></pre>
+
+  <h2>3) Maven installieren</h2>
+  <pre><code>sudo apt update
+sudo apt install maven -y
+mvn -v</code></pre>
+
+  <h2>4) Bauen</h2>
+  <pre><code>cd HelloServlet
+mvn clean package</code></pre>
+  <p>Die WAR-Datei findest du danach unter <code>target/HelloServlet.war</code>.</p>
+
+  <hr>
+  </body>
+</html>
+

@@ -1,0 +1,35 @@
+Aufgabenthemen
+==============
+01	Klassendiagramm (Class)
+02	Entity-Relationship-Diagramm (ER)
+03	Zustandsdiagramm (State-Chart)
+04	Aktivitätsdiagramm (Activity)
+05	Aktivitätsdiagramm (Activity)
+06	Pseudocode
+07	Klassendiagramm (Class)
+08	Entity-Relationship-Diagramm (ER)
+09	Aktivitätsdiagramm (Activity)
+10	Entity-Relationship-Diagramm (ER)
+11	Zustandsdiagramm (State-Chart)
+12	Klassendiagramm (Class)
+13	Entity-Relationship-Diagramm (ER)
+14	Aktivitätsdiagramm (Activity)
+15	Entity-Relationship-Diagramm (ER)
+16	Anwendungsfalldiagramm (Use-Case)
+17	Klassendiagramm (Class)
+18	Entity-Relationship-Diagramm (ER)
+19	Aktivitätsdiagramm (Activity)
+20	Pseudocode
+
+
+
+Freitags-Kombinationen
+======================
+01 07	Klassendiagramme
+12 16	Klassendiagramm & Anwendungsfalldiagramm
+17 04	Klassendiagramm & Aktivitätsdiagramm
+05 09	Aktivitätsdiagramme
+14 03	Aktivitätsdiagramm & Zustandsdiagramm
+19 11	Aktivitätsdiagramm & Zustandsdiagramm
+06 20	Pseudocode
+

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Sascha Baumeister" />
+		<meta name="dcterms.rightsHolder" content="Sascha Baumeister" />
+		<meta name="dcterms.rights" content="all rights reserved" />
+		<meta name="dcterms.dateCopyrighted" content="2025" />
+
+		<title>Calculator App</title>
+		<link rel="icon" href="media/javascript-logo.png" />		
+		<link rel="stylesheet" href="../../share/general.css" />
+		<link rel="stylesheet" href="style/calculator.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" />
+
+		<script type="module" async="true" src="script/calculator.js"></script>
+
+		<template name="example-fragment.html">
+			<tr><td>Sascha</td><td>Baumeister</td></tr>
+		</template>
+	</head>
+	<body>
+		<header>
+			<nav class="tabs">
+				<label>Calculator App</label>
+				<img class="logo" src="media/logo-damago.png" />
+			</nav>
+		</header>
+		<main>
+			<article class="left hidden"></article>
+			<article class="center">
+				<section class="data">
+					<div class="input">
+						<input type="number" class="value left" value="0" />
+						<input type="number" class="value right" value="0" />
+					</div>
+					<div class="control">
+						<button type="button" class="add">+</button>
+						<button type="button" class="subtract">-</button>
+						<button type="button" class="multiply">*</button>
+						<button type="button" class="divide">/</button>
+						<button type="button" class="modulo">%</button>
+						<button type="button" class="exp">**</button>
+						<button type="button" class="root">√</button>
+						<button type="button" class="log">log</button>
+						<button type="button" class="shift left">&lt;&lt;</button>
+						<button type="button" class="shift right">&gt;&gt;</button>
+					</div>
+					<div class="output">
+						<label>Ergebnis</label>
+						<input type="text" readonly="true" />
+					</div>
+				</section></section>
+			</article>
+			<article class="right hidden"></article>
+		</main>
+		<footer>
+			<div class="message">
+				<label>Nachricht</label>
+				<input type="text" readonly="true" />
+			</div>
+		</footer>
+	</body>
+</html>

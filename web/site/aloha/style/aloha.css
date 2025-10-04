@@ -1,0 +1,32 @@
+body {
+	background-color: azure;
+
+	.hidden {
+		display: none;
+	}
+
+	legend {
+		font-size: 50%;
+		color: green;
+	}
+
+	div.faust {
+		span {
+			color: green;
+		}
+
+		span.discipline {
+			color: blue;
+		}
+	}
+
+	div.week {
+		tr.workday {
+			color: blue;
+		}
+
+		tr.weekend {
+			color: green;
+		}
+	}
+}

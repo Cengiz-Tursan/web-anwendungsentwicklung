@@ -1,0 +1,1 @@
+"C:\Program Files\OpenSSL-Win64\bin\openssl.exe" req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout Ergo_Proxy-apache.key -out Ergo-Proxy-apache.crt

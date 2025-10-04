@@ -1,0 +1,14 @@
+body {
+	font-family: Instrument Serif;
+	background-color: azure;
+
+	article.center {
+		section.data {
+			div.sort {
+				input.value {
+					width: 6rem;
+				}
+			}
+		}
+	}
+}

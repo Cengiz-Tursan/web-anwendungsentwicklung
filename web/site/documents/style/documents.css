@@ -1,0 +1,27 @@
+:where(h1) {
+	margin-block: 0em;
+	font-size: 2em;
+}
+
+body {
+	background-color: azure;
+
+	.hidden {
+		display: none;
+	}
+
+	div.image>img {
+		height: 100px;
+		width: 100px;
+	}
+
+	div.video>video {
+		height: 200px;
+		width: 200px;
+	}
+
+	div.svg>svg {
+		height: 300px;
+		width: 420px;
+	}
+}

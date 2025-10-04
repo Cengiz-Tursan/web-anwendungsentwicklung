@@ -1,0 +1,137 @@
+/*
+ * Generic CSS settings for border layout, corporate identity, etc.
+ */
+:root {
+	--corporate-font-family: sans-serif;
+	--corporate-division-bgcolor: ivory;
+	--corporate-thead-bgcolor: #FCE1E1;
+	--corporate-head-color: #9C000B;
+}
+
+:where(h1) {
+  margin-block: 0.67em;
+  font-size: 2em;
+}
+
+body {
+	font-family: var(--corporate-font-family);
+
+	.hidden {
+		display: none;
+	}
+
+	h1,h2,h3,h4,h5,h6,ul,ol,pre,input,textarea {
+		margin: 0;
+	}
+
+	h1,h2,h3,h4,h5,h6 {
+		color: var(--corporate-head-color);
+	}
+
+	label,span,nav {
+		display: inline-block;
+	}
+
+	label,span,output,img,textarea {
+		vertical-align: middle;
+	}
+
+	label,input[type="number"] {
+		text-align: right;
+	}
+
+	table {
+		border-collapse: collapse;
+
+		tr,th,td {
+			border-width: 1px;
+		}
+	}
+
+	svg {
+		background-color: black;
+		color: white;
+		font-family: monospaced;
+		font-size: 8px;
+
+		g.coordinates {
+			stroke: white;
+			fill: white;
+		}
+	}
+
+	header {
+		nav.tabs {
+			margin-bottom: 0.5rem;
+			border-radius: 0.75rem;
+			background-color: black;
+			color: red;
+			position: relative;
+			width: 100%;
+
+			:not(img.logo) {
+				margin: 0.25rem 0.0rem 0.25rem 0.5rem;
+			}
+
+			:not(img.logo).active {
+				color: green;
+				font-weight: bold;
+			}
+
+			img.logo {
+				float: right;
+				margin: 0.25rem 0.5rem 0.25rem 0.0rem;
+				height: 1.4rem;
+			}
+		}
+	}
+
+	main {
+		display: flex;
+
+		article.left,article.right {
+			width: 5rem;
+		}
+
+		article.center {
+			width: 100%;
+
+			section {
+				margin-bottom: 0.75rem;
+			}
+
+			section>div {
+				padding: 0 0.1rem;
+				margin-bottom: 0.25rem;
+				background-color: var(--corporate-division-bgcolor);
+			}
+		}
+	}
+
+	footer {
+		div {
+			label {
+				width: 3.95rem;
+				margin-right: 0.25rem;
+			}
+		}
+
+		div.message {
+			width: 100%;
+			display: flex;
+
+			label {
+				width: 4.5rem;
+			}
+
+			input {
+				width: 100%;
+				color: green;
+			}
+
+			input.failure {
+				color: red;
+			}
+		}
+	}
+}

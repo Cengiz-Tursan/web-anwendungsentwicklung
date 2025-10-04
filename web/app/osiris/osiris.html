@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Sascha Baumeister" />
+		<meta name="dcterms.rightsHolder" content="Sascha Baumeister" />
+		<meta name="dcterms.rights" content="all rights reserved" />
+		<meta name="dcterms.dateCopyrighted" content="2025" />
+
+		<title>Osiris App</title>
+		<link rel="icon" href="media/javascript-logo.png" />		
+		<link rel="stylesheet" href="../../share/general.css" />
+		<link rel="stylesheet" href="style/osiris.css" />
+		<link rel="stylesheet" href="style/calculator-tab.css" />
+		<link rel="stylesheet" href="style/notes-tab.css" />
+		<link rel="stylesheet" href="style/parameter-tab.css" />
+		<link rel="stylesheet" href="style/await-tab.css" />
+
+		<script type="module" async="true" src="script/calculator-tab-controller.js"></script>
+		<script type="module" async="true" src="script/notes-tab-controller.js"></script>
+		<script type="module" async="true" src="script/parameter-tab-controller.js"></script>
+		<script type="module" async="true" src="script/await-tab-controller.js"></script>
+
+		<template name="calculator-tab.html">
+			<section class="calculator">
+				<div class="input">
+					<input type="number" class="value left" value="0" />
+					<input type="number" class="value right" value="0" />
+				</div>
+				<div class="control">
+					<button type="button" class="add">+</button>
+					<button type="button" class="subtract">-</button>
+					<button type="button" class="multiply">*</button>
+					<button type="button" class="divide">/</button>
+					<button type="button" class="modulo">%</button>
+					<button type="button" class="exp">**</button>
+					<button type="button" class="root">√</button>
+					<button type="button" class="log">log</button>
+					<button type="button" class="shift left">&lt;&lt;</button>
+					<button type="button" class="shift right">&gt;&gt;</button>
+				</div>
+				<div class="output">
+					<label>Ergebnis</label>
+					<input type="text" readonly="true" />
+				</div>
+			</section>
+		</template>
+
+		<template name="notes-tab.html">
+			<section class="notes">
+				<div class="notes">
+					<textarea></textarea>
+				</div>
+				<div class="control">
+					<button type="button" class="submit">speichern</button>
+					<button type="button" class="toggle">verbergen</button>
+				</div>
+			</section>
+		</template>
+
+		<template name="parameter-tab.html">
+			<section class="parameter">
+				<div class="values">
+					<div class="riddle">
+						<label>Rätsel</label>
+						<input type="text" />
+					</div>
+					<div class="meaning-1">
+						<label>Sinn des Lebens 1</label>
+						<input type="number" value="0" />
+					</div>
+					<div class="meaning-2">
+						<label>Sinn des Lebens 2</label>
+						<input type="number" value="0" />
+					</div>
+					<div class="human">
+						<label>Mensch</label>
+						<input type="checkbox" />
+					</div>
+				</div>
+				<div class="control">
+					<button type="button" class="convert">umwandeln</button>
+				</div>
+			</section>
+		</template>
+		<template name="await-tab.html">
+			<section class="await">
+				<div class="values">
+					<div class="a">
+						<label>Zahl a</label>
+						<input type="number" value="0" />
+					</div>
+					<div class="b">
+						<label>Zahl b</label>
+						<input type="number" value="0" />
+					</div>
+					<div class="c">
+						<label>Zahl c</label>
+						<input type="number" value="0" />
+					</div>
+				</div>
+				<div class="control">
+					<button type="button" class="calculate">berechnen</button>
+				</div>
+				<div class="json">
+					<textarea></textarea>
+				</div>
+				<div class="control">
+					<button type="button" class="query">abfragen</button>
+				</div>
+			</section>
+		</template>
+	</head>
+
+	<body>
+		<header>
+			<nav class="tabs">
+				<button type="button" class="calculator">Taschenrechner</button> 
+				<button type="button" class="notes">Notizen</button> 
+				<button type="button" class="parameter">URL Parameter</button> 
+				<button type="button" class="await">async/await</button> 
+				<img class="logo" src="media/logo-damago.png" />
+			</nav>
+		</header>
+		<main>
+			<article class="left hidden"></article>
+			<article class="center"></article>
+			<article class="right hidden"></article>
+		</main>
+		<footer>
+			<div class="message">
+				<label>Nachricht</label>
+				<input type="text" readonly="true" />
+			</div>
+		</footer>
+	</body>
+</html>

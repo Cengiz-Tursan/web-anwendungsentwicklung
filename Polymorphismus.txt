@@ -1,0 +1,47 @@
+Beispiel für Polymorphismus:
+public class A extends Object {
+	protected Number doIt (Object a, String b) throws IOException { return "X"; }
+}
+ 
+public class B extends A {
+	// method overriding einer virtuellen Methode ==> Polymorphismus
+	public Integer doIt (Object c, String d) { return d.length(); }
+ 
+	// Method overloading ==> kein Polymorphismus
+	public Integer doIt (String c, String d) { ... }
+ 
+	// failed attempt of method overriding
+	public Object doIt (Object c, String d) { ... }
+ 
+	// failed attempt of method overriding
+	Number doIt (Object a, String b) throws IOException { ... }
+}
+ 
+...
+ 
+// Aufruf mit Laufzeitargumenten: "abc" "xyz"
+static public void main (String[] args) {
+	final A[] things = new A[] { new A(), new B()};
+ 
+	for (final String arg : args) {
+		for (final Thing thing : things) {
+			System.out.println(thing.doIt(null, arg));
+		}
+	}
+}
+ 
+arg: "abc"
+thing: things[0] => Aufruf A.doIt()
+outout: "X" (String)
+ 
+arg: "abc"
+thing: things[1] => Aufruf B.doIt()
+outout: 3 (Integer)
+ 
+arg: "xyz"
+thing: things[0] => Aufruf A.doIt()
+outout: "X" (String)
+ 
+arg: "xyz"
+thing: things[1] => Aufruf B.doIt()
+outout: 3 (Integer)

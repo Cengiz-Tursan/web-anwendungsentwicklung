@@ -1,0 +1,30 @@
+Vorausetzung für Polymorphismus:
+- Vererbung mit Super- und Subklassen
+- Dieselbe Methodensignatur muss in der Superklasse
+  und in mindestens einer ihrer Subklassen implementiert werden
+  ==> Method Overriding (überschreiben)
+- Die überschrieben Methode muss virtuell sein:
+  - Java: Nicht-private (==> Virtuelle) Instanzmethode
+  - C++:  Virtuelle Instanzmethoden:
+      - Method Resolution:			callVirtual("calculatePreis" Double)
+	  - Nicht-Virtueller Aufruf:	callStatic(424242)
+
+
+Andere Effekte von Method Overriding:
+- die überschreibende Methode muss mindestens die Sichtbarkeit
+  der überschriebenen Methode aufweisen
+- der Rückgabetyp der überschreibenen Methode darf entweder gleich
+  bleiben oder spezialisiert werden => Kovarianz
+- die Menge der deklarierten checked Exceptions darf bei der
+  überschreibenen Methode gleich bleiben oder schrumpfen
+
+
+Sichtbarkeiten (Java):
+- public:		unbeschränkte Sichtbarkeit
+- protected:	Sichtbarkeitsbeschränkung auf alle Klassen
+				im gleichen Paket, plus alle direkten und
+				indirekten Subklassen unabhängig vom Paket
+- package:		Sichtbarkeitsbeschränkung auf alle Klassen
+				im gleichen Paket
+- private:		maximale Sichtbarkeitsbeschränkung auf
+				umgebende Klasse

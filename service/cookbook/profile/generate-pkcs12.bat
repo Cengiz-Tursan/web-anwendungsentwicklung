@@ -1,0 +1,1 @@
+"C:\Program Files\Java\jdk-21\bin\keytool" -genkey -v -alias Ergo-Proxy -keyalg RSA -validity 3652 -storetype pkcs12 -keystore Ergo-Proxy-rest.p12

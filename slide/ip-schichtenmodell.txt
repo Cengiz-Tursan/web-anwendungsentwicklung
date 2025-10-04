@@ -1,0 +1,7 @@
+IP-Schichtenmodell
+==================
+5 Anwendungsprotokoll-Schicht: HTTP, HTTPS, FTP, SFTP, FTPS, Web-RTC, Telnet, ...
+4 Transport-Schicht: TCP (1:1, Verbindungsorientiert, TLS), UDP/UDP Lite (1:*, Paketorientiert), Ports
+3 Router-Schicht: IP-Pakete, Internet-Addressen v4 (32bit), v6 (128bit)
+2 Geräteverbindung: Ethernet, Token-Ring, WLAN
+1 Physischer Transport: Kabel, Stecker & Buchsen, Frequenzen, Encodierung

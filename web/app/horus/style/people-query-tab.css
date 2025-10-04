@@ -1,0 +1,22 @@
+body>main>article.center {
+	section.people-authentication {
+		label {
+			width: 4rem;
+		}
+	}
+
+	section.people-query {
+		label {
+			width: 6rem;
+		}
+	}
+
+	section.people-viewer {
+		table {
+			td.avatar>button>img {
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+	}
+}

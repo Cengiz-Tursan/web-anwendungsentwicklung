@@ -1,0 +1,9 @@
+body>main>article.center {
+	section.parameter {
+		div.values {
+			label {
+				width: 9rem;
+			}
+		}
+	}
+}

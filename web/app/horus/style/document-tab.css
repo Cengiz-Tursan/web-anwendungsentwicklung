@@ -1,0 +1,22 @@
+body>main>article.center {
+	section.document {
+		label {
+			width: 6rem;
+		}
+
+		div.hash>input {
+			width: 30rem;
+		}
+
+		img,video,iframe {
+			vertical-align: middle;
+			width: 10rem;
+			height: 10rem;
+		}
+
+		audio {
+			vertical-align: middle;
+			width: 10rem;
+		}
+	}
+}

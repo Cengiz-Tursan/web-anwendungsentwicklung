@@ -1,0 +1,9 @@
+body>main>article.center {
+	section.calculator {
+		div.sort {
+			input.value {
+				width: 6rem;
+			}
+		}
+	}
+}

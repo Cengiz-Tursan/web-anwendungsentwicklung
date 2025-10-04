@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Sascha Baumeister" />
+		<meta name="dcterms.rightsHolder" content="Sascha Baumeister" />
+		<meta name="dcterms.rights" content="all rights reserved" />
+		<meta name="dcterms.dateCopyrighted" content="2025" />
+
+		<title>Extends App</title>
+		<link rel="icon" href="media/javascript-logo.png" />		
+		<link rel="stylesheet" href="../../share/general.css" />
+		<link rel="stylesheet" href="style/extends.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" />
+
+		<script type="module" async="true" src="script/extends.js"></script>
+
+		<template name="example-fragment.html">
+			<tr><td>Sascha</td><td>Baumeister</td></tr>
+		</template>
+	</head>
+	<body>
+		<header>
+			<nav class="tabs">
+				<label>Extends App</label>
+				<img class="logo" src="media/logo-damago.png" />
+			</nav>
+		</header>
+		<main>
+			<article class="left hidden"></article>
+			<article class="center">
+				<section class="data">
+					<div class="main">
+						<input type="number" class="value first" value="0" />
+						<input type="number" class="value second" value="0" />
+						<input type="number" class="value third" value="0" />
+						<input type="number" class="value fourth" value="0" />
+						<button type="button" class="add">add</button>
+						<button type="button" class="multiply">multiply</button>
+						<button type="button" class="sort">sort</button>
+						<input type="text" class="output" readonly="true" />
+					</div>
+					<div>Check the console for more output data ...</div>
+				</section></section>
+			</article>
+			<article class="right hidden"></article>
+		</main>
+		<footer>
+			<div class="message">
+				<label>Nachricht</label>
+				<input type="text" readonly="true" />
+			</div>
+		</footer>
+	</body>
+</html>

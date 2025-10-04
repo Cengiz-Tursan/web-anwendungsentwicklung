@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Sascha Baumeister" />
+		<meta name="dcterms.rightsHolder" content="Sascha Baumeister" />
+		<meta name="dcterms.rights" content="all rights reserved" />
+		<meta name="dcterms.dateCopyrighted" content="2025" />
+
+		<title>Car Site</title>
+		<link rel="icon" href="media/car.png" />		
+		<link rel="stylesheet" href="style/car.css" />
+
+		<script type="text/javascript" async="true" src="script/car.js"></script>
+
+		<template name="example-fragment.html">
+			<tr><td>Sascha</td><td>Baumeister</td></tr>
+		</template>
+	</head>
+	<body>
+		<header>Kopf-"Zeile"</header>
+		<main>
+			<article class="left hidden">A</article>
+			<article class="center">
+				<section class="car editor">
+					<h1>Autodatenerfassung</h1>
+					<div class="photo">
+						<label>Foto</label>
+						<button type="button" onclick="document.querySelector('div.photo>input').click()">
+							<img />
+						</button>
+						<input type="file" class="hidden" accept="image/*" />
+					</div>
+					<div class="manufacturer">
+						<label>Hersteller</label>
+						<input type="text" />
+					</div>
+					<div class="type">
+						<label>Typ</label>
+						<input type="text" />
+					</div>
+					<div class="variant">
+						<label>Variante</label>
+						<select>
+							<option value="COUPE">Coupe</option>
+							<option value="CABRIOLET">Cabriolet</option>
+							<option value="COMBI">Kombi</option>
+						</select>
+					</div>
+					<div class="tyre">
+						<label>Reifen</label>
+						<div>
+							<label class="option">Sommerreifen</label>
+							<input type="radio" name="tyre" selected="true" />
+						</div>
+						<div>
+							<label class="option">Winterreifen</label>
+							<input type="radio" name="tyre" />
+						</div>
+						<div>
+							<label class="option">Allwetterreifen</label>
+							<input type="radio" name="tyre" />
+						</div>
+					</div>
+					<div class="accessory">
+						<label>Zubehör</label>
+						<select multiple="true">
+							<option value="RADIO">Radio</option>
+							<option value="SEAT_HEATING">Sitzheizung</option>
+							<option value="BAGUETTE_HOLDER">Baguettehalter</option>
+							<option value="CUP_HOLDER">Getränkehalter</option>
+						</select>
+					</div>
+					<div class="color">
+						<label>Farbe</label>
+						<input type="color" />
+					</div>
+					<div class="power">
+						<label>Pferdestärken</label>
+						<input type="number" min="0" step="10" />
+					</div>
+					<div class="consumption">
+						<label>Verbrauch (l/100km)</label>
+						<input type="range" />
+						<label>max. 100l/100km</label>
+					</div>
+					<div class="manufacture-year">
+						<label>Baujahr</label>
+						<input type="number" min="1850" step="10" />
+					</div>
+					<div class="registration">
+						<label>Zulassung</label>
+						<input type="date" />
+					</div>
+					<div class="inspection">
+						<label>TÜV</label>
+						<input type="month" />
+					</div>
+					<div class="accident-free">
+						<label>Unfallfrei</label>
+						<input type="checkbox" />
+					</div>
+					<div class="unfreeze">
+						<label>Auftauen</label>
+						<input type="time" />
+					</div>
+					<div class="condition">
+						<label>Zustand</label>
+						<textarea></textarea>
+					</div>
+					<div class="control">
+						<button type="button" class="submit" disabled="true">speichern</button>
+						<button type="button" class="cancel">abbrechen</button>
+					</div>
+				</section>
+			</article>
+			<article class="right hidden">Z</article>
+		</main>
+		<footer>Fuß-"Zeile"</footer>
+	</body>
+</html>
